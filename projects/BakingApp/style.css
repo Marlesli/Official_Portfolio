@@ -1,0 +1,235 @@
+/* Basic Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff8f1;
+  color: #4b2e2e;
+  padding: 2rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #d67c7c;
+}
+
+.dessert-card {
+  background: #edd8e4;
+  border: 2px solid #d67c7c;
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 400px;
+  margin: 1rem auto;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+button {
+  margin: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#bakeModeBtn {
+  background-color: #ffccbc;
+  color: #4b2e2e;
+}
+
+#viewRecipeBtn {
+  background-color: #e1bee7;
+  color: #4b2e2e;
+}
+
+.cake-icon {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+.cake-top {
+  width: 100%;
+  height: 10px;
+  background-color: #ff8c00; /* Orange frosting */
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+}
+
+.cake-body {
+  width: 100%;
+  height: 30px;
+  background-color: #f5b7b1; /* Cake body color */
+  position: absolute;
+  top: 15px;
+  left: 0;
+  border-radius: 5px;
+}
+
+.cake-bottom {
+  width: 100%;
+  height: 10px;
+  background-color: #e67e22; /* Bottom color */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 5px;
+  animation: floatCake 3s ease-in-out infinite;
+}
+
+@keyframes floatCake {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Moves up */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  background-color: #ff6347;
+  border-radius: 50%;
+  animation: bounceInAndOut 6s linear infinite;
+  margin-left: 20%;
+}
+
+@keyframes bounceInAndOut {
+  0%   { transform: translate(-100px, 0); }
+  10%  { transform: translate(0px, -60px); }
+  20%  { transform: translate(100px, 0); }
+  30%  { transform: translate(200px, -60px); }
+  40%  { transform: translate(300px, 0); }
+  50%  { transform: translate(400px, -60px); }
+  60%  { transform: translate(500px, 0); }
+  70%  { transform: translate(600px, -60px); }
+  80%  { transform: translate(700px, 0); }
+  90%  { transform: translate(800px, -60px); }
+  100% { transform: translate(900px, 0); }
+}
+
+
+/* Cherry bounce animation */
+path[fill="#F44336"] {
+  animation: cherryBounce 5s ease-in-out 1;
+}
+
+@keyframes cherryBounce {
+  0% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Frosting style */
+path[fill="#FF80AB"] {
+  fill: #ff4081; /* Change frosting color */
+  animation: wrapperBounce 6s ease-in-out 1;
+}
+
+@keyframes wrapperBounce {
+  0% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Cupcake Wrapper style */
+path[fill="#795548"] {
+  fill: #7c4d3d; /* Darken the wrapper */
+  animation: cakePart 6s ease-in-out 1;
+}
+
+@keyframes cakePart {
+  0% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+path[fill="#5D4037"] {
+  animation: accentsFadeIn 2s ease-in 3s forwards;
+  opacity: 0;
+}
+
+path[fill="#FFE0B2"] {
+  animation: swirlDrop 1.5s ease-out forwards;
+}
+
+@keyframes swirlDrop {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+path[fill="#F8BBD0"] {
+  fill: #f8bbd0; /* Pink ridged wrapper */
+  animation: ridgedWrapperDrop 2s ease-out 1;
+}
+
+
+
+.top-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #fff0f5; /* Light pink */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
+}
+
+.top-buttons button {
+  background-color: #f8bbd0;
+  color: #5d4037;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.top-buttons button:hover {
+  background-color: #f48fb1;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
+
+}
